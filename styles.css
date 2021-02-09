@@ -23,6 +23,8 @@ html {
 }
 body {
     --scrollbar-width: calc(100vw - 100%);
+    background: #254079;
+    overflow-x: hidden;
 }
 header, main, footer {
     max-width: calc(100vw - var(--scrollbar-width));

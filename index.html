@@ -136,9 +136,11 @@
     <script>
         function toggleMenuNav() {
             let menuNavButton = document.querySelector(".menu-nav-button");
-            let menuNav = document.querySelector(".menu-nav")
-            menuNavButton.classList.toggle('active')
-            menuNav.classList.toggle('active')
+            let menuNav = document.querySelector(".menu-nav");
+            menuNavButton.classList.toggle('active');
+            menuNav.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+            document.documentElement.classList.toggle('no-scroll');
             let logo = document.querySelector(".logo");
             isScrolledViewAfterElem(document.querySelector(".logo-opisanie"));
         }

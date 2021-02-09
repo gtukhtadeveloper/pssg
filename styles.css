@@ -481,83 +481,14 @@ footer .policy {
     }
 }
 @media (max-width: 980px) {
-    header {
-        height: 80pt;
-        padding: 10pt 10pt;
-    }
-    header .logo {
-        font-size: 25pt;
-    }
     header .header-nav ul {
         display: none;
     }
     .menu-nav-button {
         display: block;
-        background-size: 70pt 70pt;
-        width: 70pt;
-        height: 70pt;
     }
     .menu-nav.active {
         right: 0;
-    }
-    section {
-        padding-top: 100pt;
-    }
-    #screen-section .screens-bar .left-button-screen,
-    #screen-section .screens-bar .right-button-screen {
-        width: 60pt;
-        height: 60pt;
-        border: 5pt solid #0076c1;
-        border-radius: 30pt;
-    }
-    #screen-section .screens-bar .arrow-right-top,
-    #screen-section .screens-bar .arrow-right-bottom,
-    #screen-section .screens-bar .arrow-left-top,
-    #screen-section .screens-bar .arrow-left-bottom {
-        background:  #0076c1;
-        height: 5pt;
-        position: absolute;
-        width: 30pt;
-    }
-    #screen-section .screens-bar .arrow-right-top {
-        left: 7pt;
-        top: 24pt;
-    }
-    #screen-section .screens-bar .arrow-right-bottom {
-        left:-3pt;
-        top: 22pt;
-    }
-    #screen-section .screens-bar .arrow-left-top {
-        left: 6pt;
-        top: 2pt;
-    }
-    #screen-section .screens-bar .arrow-left-bottom {
-        left: -3pt;
-        top: 43pt;
-    }
-    #screen-section .screens-bar .screen-radio-button {
-        margin-right: 10pt;
-    }
-    #screen-section .screens-bar div:nth-of-type(2) {
-        margin-left: 10pt;
-    }
-    #screen-section .screens-bar .screen-radio-button label {
-        padding: 0px 15pt;
-        line-height: 34pt;
-        border: 5pt solid #0076c1;
-        border-radius: 20pt;
-        height: 40pt;
-        width: 40pt;
-    }
-    footer {
-        height: 80pt;
-        font-size: 20pt;
-    }
-    footer .footer-content {
-        border-top: 1pt solid rgb(160, 160, 160);
-    }
-    footer .policy {
-        margin-left: 50pt;
     }
 }
 @media (max-width: 980px) {

@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Игра "Путешествие с северным газом"</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png" />
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo" onclick="toggleMenuNav()">
+                <span>
+                    Путешествие
+                </span>
+                <span>
+                    с северным
+                </span>
+                <span>
+                    газом
+                </span>
+            </a>
+            <div class="header-nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#screen-section">Снимки экрана</a></li>
+                    <li><a href="#form-section">Обратная связь</a></li>
+                </ul>
+                <div class="menu-nav-button" onclick="toggleMenuNav()">
+            </div>
+        </header>
+        <div class="menu-nav">
+            <ul>
+                <li><a href="#" onclick="toggleMenuNav()">Главная</a></li>
+                <li><a href="#screen-section" onclick="toggleMenuNav()">Снимки экрана</a></li>
+                <li><a href="#form-section" onclick="toggleMenuNav()">Обратная связь</a></li>
+            </ul>
+        </div>
+        <main>
+            <section id="main-section">
+                <img class="severok" src="images/severok.png">
+                <div class="opisanie">
+                    <img class="logo-opisanie" src="images/logo.png">
+                    <div class="gaz">
+                        <div>Описание</div>
+                    </div>
+                    <div class="text-opisanie">
+                        Мальчик Дима, профессор Газ Газыч и Северок вместе с тобой совершат воображаемый полет во времени и пространстве. 
+                        В ходе игры  ты узнаешь о трудном и важном деле, которым занимается «Газпром трансгаз Ухта». 
+                        О том, как газ транспортируют на дальние расстояния и для чего это нужно. 
+                        Герои игры расскажут тебе о том, что такое компрессорные станции, какие бывают газопроводы, люди каких профессий работают на предприятии.  
+                        Надеемся, что испытания и загадки будут интересными и понятными. Итак. Мы отправляемся. Если хочешь – идём с нами!
+                    </div>
+                </div>
+                <img class="gaz-gazych" src="images/gaz_gazych_2.png">  
+            </section>
+            <section id="screen-section">
+                <div class="title-section">
+                    Снимки экрана
+                </div>
+                <div class="screens">
+                    <div data-screen-id=1 class="screen active" onclick="changeByid(1)">
+                        <img src="./images/screen_1.jpg">
+                    </div>
+                    <div data-screen-id=2 class="screen next1" onclick="changeByid(2)">
+                        <img src="./images/screen_2.jpg">
+                    </div>
+                    <div data-screen-id=3 class="screen next2" onclick="changeByid(3)">
+                        <img src="./images/screen_3.jpg">
+                    </div>
+                    <div data-screen-id=4 class="screen back" onclick="changeByid(4)">
+                        <img src="./images/screen_4.jpg">
+                    </div>
+                    <div data-screen-id=5 class="screen prev2" onclick="changeByid(5)">
+                        <img src="./images/screen_5.jpg">
+                    </div>
+                    <div data-screen-id=6 class="screen prev1" onclick="changeByid(6)">
+                        <img src="./images/screen_6.jpg">
+                    </div>
+                </div>
+                <div class="screens-bar">
+                    <div class="left-button-screen" onclick="changeScreen({direction: 'back'})">
+                        <div class="arrow-left-top"></div>
+                        <div class="arrow-left-bottom"></div>
+                    </div>
+                    <div class="screen-radio-button">
+                        <input id="screen-radio-button-1" type="radio" name="screen-radio" onclick="changeByid(1)" checked>
+                        <label for="screen-radio-button-1"></label>
+                    </div>
+                    <div class="screen-radio-button">                       
+                        <input id="screen-radio-button-2" type="radio" name="screen-radio" onclick="changeByid(2)">
+                        <label for="screen-radio-button-2"></label> 
+                    </div>
+                    <div class="screen-radio-button">
+                        <input id="screen-radio-button-3" type="radio" name="screen-radio" onclick="changeByid(3)">
+                        <label for="screen-radio-button-3"></label>
+                    </div>
+                    <div class="screen-radio-button">
+                        <input id="screen-radio-button-4" type="radio" name="screen-radio" onclick="changeByid(4)">
+                        <label for="screen-radio-button-4"></label>
+                    </div>
+                    <div class="screen-radio-button">
+                        <input id="screen-radio-button-5" type="radio" name="screen-radio" onclick="changeByid(5)">
+                        <label for="screen-radio-button-5"></label>
+                    </div>
+                    <div class="screen-radio-button">               
+                        <input id="screen-radio-button-6" type="radio" name="screen-radio" onclick="changeByid(6)">
+                        <label for="screen-radio-button-6"></label>
+                    </div>
+                    <div class="right-button-screen" onclick="changeScreen({direction: 'next'})">
+                        <div class="arrow-right-top"></div>
+                        <div class="arrow-right-bottom"></div>
+                    </div>
+                </div>  
+            </section>
+            <section id="form-section">
+                <div class="title-section">
+                    Обратная связь
+                </div>
+                <div class="form-content">
+                    <form class="form-submit">
+                        <input type="text" placeholder="Имя">
+                        <input type="email" placeholder="e-mail">
+                        <textarea placeholder="Сообщение"></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                    <img class="dima" src="images/dima.png">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <span>© ООО "Газпром трансгаз Ухта", 2021</span>
+                <span><a class="policy" href="https://gtukhtadeveloper.github.io/policy/privacy.pdf" target="_blank">Политика конфиденциальности</a></span>
+            </div>
+        </footer>
+    </body>
+    <script>
+        function toggleMenuNav() {
+            let menuNavButton = document.querySelector(".menu-nav-button");
+            let menuNav = document.querySelector(".menu-nav")
+            menuNavButton.classList.toggle('active')
+            menuNav.classList.toggle('active')
+            let logo = document.querySelector(".logo");
+            isScrolledViewAfterElem(document.querySelector(".logo-opisanie"));
+        }
+
+        function isScrolledViewAfterElem(elem) {
+            let docViewTop = document.body.scrollTop;         
+            let elemBottom = elem.getBoundingClientRect().bottom + document.body.scrollTop;
+            let logo = document.querySelector(".logo");
+            if ((elemBottom <= docViewTop) === true || document.querySelector(".menu-nav").classList.contains('active')) {
+                logo.style.visibility = "visible";
+            } else {
+                logo.style.visibility = "hidden";
+            }
+        }
+
+        document.addEventListener("scroll", function(e) {
+            isScrolledViewAfterElem(document.querySelector(".logo-opisanie"));
+        }, { passive: true });
+
+        function changeByid(id_screen) {
+            let screens = document.querySelectorAll('.screen');
+            screens.forEach(s => {
+                s.classList.remove('active');
+                s.classList.remove('prev1');
+                s.classList.remove('prev2');
+                s.classList.remove('back');
+                s.classList.remove('next2');
+                s.classList.remove('next1');
+            });
+            activeId = id_screen - 1;
+            nextId = ((id_screen + 1) > screens.length) ? id_screen - screens.length : id_screen;
+            next2Id = ((id_screen + 2) > screens.length) ? id_screen + 1 - screens.length : id_screen + 1;
+            backId = ((id_screen + 3) > screens.length) ? id_screen + 2 - screens.length : id_screen + 2;
+            prev2Id = ((id_screen + 4) > screens.length) ? id_screen + 3 - screens.length : id_screen + 3;
+            prevId = ((id_screen + 5) > screens.length) ? id_screen + 4 - screens.length : id_screen + 4;
+            screens[activeId].classList.add("active");
+            screens[prevId].classList.add("prev1");
+            screens[prev2Id].classList.add("prev2");
+            screens[backId].classList.add("back");
+            screens[next2Id].classList.add("next2");
+            screens[nextId].classList.add("next1");
+
+            let radioButton = document.querySelector("#screen-radio-button-"+id_screen);
+            radioButton.checked = true;
+        }
+
+        function changeScreen({ direction, id_screen = null }) {
+            let screens = document.querySelectorAll('.screen');
+            idActiveScreen = null
+            screens.forEach(s => {
+                if (s.classList.contains('active') === true) {
+                    idActiveScreen = s.dataset.screenId
+                }
+            });
+            if (direction === 'next') {
+                changeByid((Number(idActiveScreen) - 1) === 0 ? 6 : Number(idActiveScreen) - 1)
+            } else {
+                changeByid((Number(idActiveScreen) + 1) === 7 ? 1 : Number(idActiveScreen) + 1)
+            }  
+        }
+    </script>
+</html>

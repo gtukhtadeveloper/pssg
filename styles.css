@@ -97,10 +97,6 @@ header .header-nav ul li a:hover,
 .menu-nav-button.active {
     background-image: url(./images/close.png);
 }
-html .no-scroll,
-body .no-scroll {
-    position: fixed;
-}
 .menu-nav {
     position: fixed;
     top: 0;
@@ -427,7 +423,6 @@ section:nth-child(1) {
 }
 footer {
     width: 100vw;
-    height: 80px;
     z-index: 999;
     background: #254079;
     color: white;
@@ -439,6 +434,7 @@ footer {
 }
 footer .footer-content {
     height: 100%;
+    padding: 20px 0;
     width: 90vw;
     border-top: 1px solid rgb(160, 160, 160);
     display: flex;
@@ -498,5 +494,169 @@ footer .policy {
     }
     #form-section .form-content .dima {
         display: none;
+    }
+}
+@media only screen and (max-width: 660px) {
+    #screen-section .screens {
+        height: 280px;
+    }
+    #screen-section .screens .screen {
+        width: 450px;
+        height: 250px;
+        border: 10px solid #0076c1;
+        border-radius: 5px;
+    }
+    #screen-section .screens .screen::after {
+        left: -10px;
+        top: -10px;
+        border: 10px solid #000;
+        border-radius: 5px;
+    }
+}
+@media only screen and (max-width: 530px) {
+    header {
+        height: 53px; 
+        padding: 10px 10px;
+    }
+    header .logo {
+        font-size: 1.0em;
+    }
+    .menu-nav-button {
+        background-size: 48px 48px;
+        width: 48px;
+        height: 48px;
+    }
+    .menu-nav ul li a {
+        font-size: 30px;
+    }
+    #main-section .opisanie {
+        margin: 0 10px 0 10px;
+    }
+    #main-section .opisanie .gaz {
+        bottom: -20;
+        left: 20;
+        width: 150px;
+        height: 35px;
+    }
+    #main-section .opisanie .gaz div {
+        padding: 10px 0 0 20px;
+        font-size: 15px;
+    }
+    #main-section .opisanie .text-opisanie {
+        border: 6px solid #0076c1;
+        border-radius: 15px;
+        padding: 30px 20px 20px 20px;
+        font-size: 18px;
+        font-family: 'arial';
+        color: rgb(69, 69, 69);
+        text-align: justify;
+        box-shadow: 0 20px 40px 0px rgb(0 0 0 / 50%);
+    }
+    .title-section {
+        width: 200px;
+        padding: 10px;
+        border: 0;
+        border-radius: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    #screen-section .screens {
+        width: 90vw;
+        height: 210px;
+    }
+    #screen-section .screens .screen {
+        width: 350px;
+        height: 200px;
+        border: 6px solid #0076c1;
+        border-radius: 5px;
+    }
+    #screen-section .screens .screen::after {
+        left: -6px;
+        top: -6px;
+        border: 6px solid #000;
+        border-radius: 5px;
+    }
+    #screen-section .screens-bar .left-button-screen,
+    #screen-section .screens-bar .right-button-screen {
+        width: 46px;
+        height: 46px;
+        border: 3px solid #0076c1;
+        border-radius: 23px;
+    }
+    #screen-section .screens-bar .arrow-right-top,
+    #screen-section .screens-bar .arrow-right-bottom,
+    #screen-section .screens-bar .arrow-left-top,
+    #screen-section .screens-bar .arrow-left-bottom {
+        height: 3px;
+        width: 20px;
+    }
+    #screen-section .screens-bar .arrow-right-top {
+        left: 7px;
+        top: 20px;
+    }
+    #screen-section .screens-bar .arrow-right-bottom {
+        left:-3px;
+        top: 19px;
+    }
+    #screen-section .screens-bar .arrow-left-top {
+        left: 6px;
+        top: 5px;
+    }
+    #screen-section .screens-bar .arrow-left-bottom {
+        left: -3px;
+        top: 33px;
+    }
+    #screen-section .screens-bar .screen-radio-button label {
+        padding: 0px 5px;
+        line-height: 20px;
+        border: 3px solid #0076c1;
+        border-radius: 11px;
+        height: 22px;
+        width: 22px;
+    }
+    #form-section .form-content {
+        height: 600px;
+        width: 90vw;
+    }
+    #form-section .form-content .form-submit {
+        margin-right: 0;
+        width: 90vw;
+    }
+    #form-section .form-content .form-submit input,
+    #form-section .form-content .form-submit textarea {
+        font-size: 20px;
+    }
+    #form-section .form-content .form-submit button[type="submit"] {
+        padding: 10px;
+        border: 6px solid #0076c1;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    footer {
+        font-size: 15px;
+    }
+    footer .footer-content {
+        padding: 20px 0;
+    }
+    @media only screen and (max-width: 390px) {
+        .menu-nav ul li a {
+            font-size: 20px;
+        }
+        #screen-section .screens {
+            height: 180px;
+        }
+        #screen-section .screens .screen {
+            width: 300px;
+            height: 170px;
+            border: 6px solid #0076c1;
+            border-radius: 5px;
+        }
+        #screen-section .screens .screen::after {
+            left: -6px;
+            top: -6px;
+            border: 6px solid #000;
+            border-radius: 5px;
+        }
     }
 }

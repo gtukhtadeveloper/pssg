@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./styles.css">
         <title>Игра "Путешествие с северным газом"</title>
@@ -140,8 +140,6 @@
             let menuNav = document.querySelector(".menu-nav");
             menuNavButton.classList.toggle('active');
             menuNav.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-            document.documentElement.classList.toggle('no-scroll');
             let logo = document.querySelector(".logo");
             isScrolledViewAfterElem(document.querySelector(".logo-opisanie"));
         }

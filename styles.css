@@ -417,9 +417,23 @@ section:nth-child(1) {
 #form-section .form-content .form-submit button[type="submit"]:hover {
     background: rgb(143, 200, 247);
 }
+#form-section .form-content .form-submit button[type="submit"]:disabled {
+    filter: grayscale(100%)
+}
 #form-section .form-content .dima {
     width: 300px;
     align-self: flex-start;
+}
+#contact-status {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+}
+#contact-status.accept {
+    color: rgb(6, 180, 20);
+}
+#contact-status.error {
+    color: rgb(168, 2, 44);
 }
 footer {
     width: 100vw;

@@ -117,11 +117,13 @@
                     Обратная связь
                 </div>
                 <div class="form-content">
-                    <form class="form-submit">
-                        <input type="text" placeholder="Имя">
-                        <input type="email" placeholder="e-mail">
-                        <textarea placeholder="Сообщение"></textarea>
-                        <button type="submit">Отправить</button>
+                    <form id="contact-form" class="form-submit" action="https://formspree.io/f/mnqorkqe"
+                            method="POST">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="email" name="email" placeholder="e-mail">
+                        <textarea name="message" placeholder="Сообщение"></textarea>
+                        <button id="contact-submit" type="submit">Отправить</button>
+                        <p id="contact-status"></p>
                     </form>
                     <img class="dima" src="images/dima.png">
                 </div>
@@ -199,6 +201,56 @@
             } else {
                 changeByid((Number(idActiveScreen) + 1) === 7 ? 1 : Number(idActiveScreen) + 1)
             }  
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+            let form = document.getElementById("contact-form");
+            let button = document.getElementById("contact-submit");
+            let status = document.getElementById("contact-status");
+            
+
+            function success() {
+                form.reset();
+                button.style = "display: none";
+                status.classList.remove("accept");
+                status.classList.remove("error");
+                status.classList.add("accept");
+                status.innerHTML = "Сообщение отправлено";
+            }
+
+            function error() {
+                status.classList.remove("accept");
+                status.classList.remove("error");
+                status.classList.add("error");
+                status.innerHTML = "Что-то пошло не так!";
+            }
+
+            form.addEventListener("submit", function(ev) {
+                ev.preventDefault();
+                let data = new FormData(form);
+                if ((document.querySelector("#contact-form input[type='email']").value === "") || 
+                        (document.querySelector("#contact-form input[type='text']").value === "") ||
+                        (document.querySelector("#contact-form textarea").value === "")) {
+                    status.innerHTML = "Не все поля заполнены для отправки сообщения";
+                    return;
+                }
+                button.disabled = true;
+                ajax(form.method, form.action, data, success, error);
+            });
+        });
+
+        function ajax(method, url, data, success, error) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    success(xhr.response, xhr.responseType);
+                } else {
+                    error(xhr.status, xhr.response, xhr.responseType);
+                }
+            };
+            xhr.send(data);
         }
     </script>
 </html>
